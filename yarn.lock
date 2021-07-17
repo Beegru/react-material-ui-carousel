@@ -2652,7 +2652,7 @@
   "resolved" "https://registry.npmjs.org/axobject-query/-/axobject-query-2.2.0.tgz"
   "version" "2.2.0"
 
-"babel-cli@^6.18.0":
+"babel-cli@^6.26.0":
   "integrity" "sha1-UCq1SHTX24itALiHoGODzgPQAvE="
   "resolved" "https://registry.npmjs.org/babel-cli/-/babel-cli-6.26.0.tgz"
   "version" "6.26.0"
