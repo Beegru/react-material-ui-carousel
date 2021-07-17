@@ -1,12 +1,12 @@
 {
-    "name": "react-material-ui-carousel",
+    "name": "@beegru/react-material-ui-carousel",
     "version": "2.2.7",
     "license": "MIT",
     "description": "A Generic, extendible Carousel UI component for React using Material UI",
-    "homepage": "https://learus.github.io",
+    "homepage": "https://beegru.github.io",
     "repository": {
         "type": "git",
-        "url": "https://github.com/Learus/react-material-ui-carousel"
+        "url": "https://github.com/Beegru/react-material-ui-carousel"
     },
     "keywords": [
         "react",
