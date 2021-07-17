@@ -1,5 +1,5 @@
 {
-    "name": "@siddhantvinchurkar/react-material-ui-carousel",
+    "name": "@beegru/react-material-ui-carousel",
     "version": "2.2.7",
     "license": "MIT",
     "description": "A Generic, extendible Carousel UI component for React using Material UI",
