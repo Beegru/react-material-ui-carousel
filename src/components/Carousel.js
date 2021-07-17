@@ -280,12 +280,12 @@ class Carousel extends Component
         const {
             children,
             className,
-            
+
             stopAutoPlayOnHover,
             animation,
             timeout,
             swipe,
-            
+
             navButtonsAlwaysInvisible,
             navButtonsAlwaysVisible,
             cycleNavigation,
@@ -296,7 +296,7 @@ class Carousel extends Component
 
             NextIcon,
             PrevIcon,
-            
+
             indicators,
             indicatorContainerProps,
             indicatorIconButtonProps,
@@ -305,7 +305,7 @@ class Carousel extends Component
         } = sanitizeProps(this.props);
 
         const classes = this.props.classes;
-        
+
         const buttonVisibilityClassValue = `${navButtonsAlwaysVisible ? classes.buttonVisible : classes.buttonHidden}`;
         const buttonCssClassValue = `${classes.button} ${buttonVisibilityClassValue} ${fullHeightHover ? classes.fullHeightHoverButton : ""} ${navButtonsProps.className}`;
         const buttonWrapperCssClassValue = `${classes.buttonWrapper} ${fullHeightHover ? classes.fullHeightHoverWrapper : ""} ${navButtonsWrapperProps.className}`;
@@ -344,11 +344,11 @@ class Carousel extends Component
                 onMouseOver={() => {stopAutoPlayOnHover && this.stop()}}
                 onMouseOut={() => {stopAutoPlayOnHover && this.reset()}}
             >
-                {   
-                    Array.isArray(children) ? 
+                {
+                    Array.isArray(children) ?
                        children.map( (child, index) => {
                             return (
-                                <CarouselItem 
+                                <CarouselItem
                                     key={`carousel-item${index}`}
                                     display={index === this.state.displayed ? true : false}
                                     active={index === this.state.active ? true : false}
@@ -372,7 +372,7 @@ class Carousel extends Component
                             timeout={timeout}
                         />
                 }
-                
+
                 {!navButtonsAlwaysInvisible && showButton(true) &&
                     <div className={`${buttonWrapperCssClassValue} ${classes.next}`} style={navButtonsWrapperProps.style}>
                         {NavButton !== undefined ?
@@ -396,9 +396,9 @@ class Carousel extends Component
                         }
                     </div>
                 }
-                
+
                 {
-                    indicators ? 
+                    indicators ?
                     <Indicators
                         classes={classes}
                         length={children.length}
@@ -449,7 +449,7 @@ function Indicators(props)
 {
     const classes = props.classes;
     const IndicatorIcon = props.IndicatorIcon !== undefined ? props.IndicatorIcon :
-        <FiberManualRecordIcon 
+        <FiberManualRecordIcon
             size='small'
             className={classes.indicatorIcon}
         />
@@ -458,20 +458,21 @@ function Indicators(props)
     let indicators = [];
     for (let i = 0; i < props.length; i++)
     {
-        const className = i === props.active ? 
-            `${classes.indicator} ${props.indicatorIconButtonProps.className} ${classes.active} ${props.activeIndicatorIconButtonProps.className}`: 
+        const className = i === props.active ?
+            `${classes.indicator} ${props.indicatorIconButtonProps.className} ${classes.active} ${props.activeIndicatorIconButtonProps.className}`:
             `${classes.indicator} ${props.indicatorIconButtonProps.className}`;
 
         const style = i === props.active ?
             Object.assign({}, props.indicatorIconButtonProps.style, props.activeIndicatorIconButtonProps.style) :
             props.indicatorIconButtonProps.style;
 
-        const item =    <IconButton 
-                            key={i} 
-                            className={className} 
-                            style={style} 
+        const item =    <IconButton
+                            key={i}
+                            className={className}
+                            style={style}
                             onClick={() => {props.press(i)}}
                             size='small'
+                            aria-label="Indicator"
                         >
                             {IndicatorIcon}
                         </IconButton>
