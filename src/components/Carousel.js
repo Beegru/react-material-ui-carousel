@@ -302,6 +302,8 @@ class Carousel extends Component
             indicatorIconButtonProps,
             activeIndicatorIconButtonProps,
             IndicatorIcon,
+
+            containerStyling,
         } = sanitizeProps(this.props);
 
         const classes = this.props.classes;
@@ -340,7 +342,7 @@ class Carousel extends Component
 
         return (
             <div
-                className={`${classes.root} ${className ? className : ""}`}
+                className={`${classes.root} ${className ? className : ""} ${containerStyling?containerStyling:""}`}
                 onMouseOver={() => {stopAutoPlayOnHover && this.stop()}}
                 onMouseOut={() => {stopAutoPlayOnHover && this.reset()}}
             >
