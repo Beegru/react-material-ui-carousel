@@ -1,6 +1,6 @@
 {
     "name": "@beegru/react-material-ui-carousel",
-    "version": "2.2.8",
+    "version": "2.2.9",
     "license": "MIT",
     "description": "A Generic, extendible Carousel UI component for React using Material UI",
     "homepage": "https://beegru.github.io",

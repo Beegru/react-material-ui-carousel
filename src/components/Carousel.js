@@ -302,9 +302,9 @@ class Carousel extends Component
             indicatorIconButtonProps,
             activeIndicatorIconButtonProps,
             IndicatorIcon,
-
-            containerStyling,
         } = sanitizeProps(this.props);
+
+        const containerStyling = this.props.containerStyling;
 
         const classes = this.props.classes;
 
